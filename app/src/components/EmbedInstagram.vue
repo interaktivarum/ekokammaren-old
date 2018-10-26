@@ -1,0 +1,46 @@
+<template>
+  <div class="embedInstagram">
+
+    <blockquote class="instagram-media" data-instgrm-captioned :data-instgrm-permalink="content.href" data-instgrm-version="9" style="width: 100%">
+      <a :href="content.href">Instagram</a>
+    </blockquote>
+
+  </div>
+</template>
+
+<script>
+
+import { store } from '@/store';
+
+export default {
+  name: 'EmbedInstagram',
+  props:{
+    content: "",
+    width: ""
+  },
+  data () {
+    return {
+    }
+  },
+  mounted: function () {
+
+    if(this.content.reloadAPI){
+      window.instgrm.Embeds.process();
+    }
+    else{
+      //store.commit('loadInstagramAPI');
+    }
+
+  },
+  computed:{
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+.instagram-media{
+}
+
+</style>

@@ -1,0 +1,196 @@
+{
+  "themes": [
+    {
+      "header": "Rubrik",
+      "description": "Beskrivning",
+      "columns": [
+        {
+          "header": "Kolumn 1",
+          "items": [
+          ]
+        },
+        {
+          "header": "Kolumn 2",
+          "items": [
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Genus och sexism i reklam och media",
+      "description": "Kvinnor och män porträtteras ofta olika i reklam och media. Medan kvinnor ofta ska vara snygga, sexiga och passiva framställs män ofta med pondus och som do:ers. Här nedan kan du jämföra olika avsändare och hur de använder modeller i sin marknadsföring.",
+      "columns": [
+        {
+          "header": "Tjejer i reklam",
+          "items": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/NewYorker.Fashion/photos/a.150987685781/10156428311655782/?type=3&theater",
+              "comment": "New Yorker och andra klädmärken anspelar ofta på sex när de ska sälja bad- och underkläder till tjejer."
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/BmWOMJljBP1",
+              "comment": ""
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/BltKRqdjayU",
+              "comment": "Kollektionskampanj för kvinnor från Zara."
+            }
+          ]
+        },
+        {
+          "header": "Killar i reklam",
+          "items": [
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/BbY5D5zH-n_",
+              "comment": "Män som arbetar tillsammans."
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/Blu_sXUlz8C",
+              "comment": "Kollektionskampanj för män från Zara."
+            }
+          ]
+        },
+        {
+          "header": "Organisationer & feminism",
+          "items": [
+            {
+              "platform": "twitter",
+              "href": "https://twitter.com/Kvinnolobbyn/status/941583860063752193",
+              "comment": ""
+            },
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/Reklamombudsmannen/posts/1894871927391494",
+              "comment": "Det finns även de som informerar om vad som gäller."
+            },
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/embed/5Sn3pgQJgII",
+              "id": "5Sn3pgQJgII",
+              "comment": ""
+            },
+            {
+              "platform": "website",
+              "href": "https://www.mabra.com/konstnaren-vander-pa-konsrollerna-i-gammal-sexistisk-reklam/",
+              "id": "",
+              "comment": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Greta Thunbergs skolstrejk",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "columns": [
+        {
+          "header": "Stöd & kärlek",
+          "items": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/dn.se/videos/657779774605701/",
+              "comment": ""
+            },
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/ETCtidningarna/posts/10156214635340804",
+              "comment": ""
+            }
+          ]
+        },
+        {
+          "header": "Kritik & hat",
+          "items": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/svegot/posts/1007262092793960",
+              "comment": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Shopping och klimatet",
+      "description": "Jag bryr mig mycket om klimatet och följer många personer och konton som handlar om miljön. Jag gillar även shopping men vet att det är dåligt för klimatet att handla för mycket nya saker. Jag vill jämföra vad olika personer och sidor skriver om shopping och klimatet.",
+      "columns": [
+        {
+          "header": "Shopping",
+          "items": [
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/BnEmX85AgNx",
+              "id": "",
+              "comment": ""
+            },
+            {
+              "platform": "website",
+              "href": "https://nyheter24.se/shopping/916052-105-prylar-for-dig-som-alskar-hosten",
+              "id": "",
+              "comment": ""
+            },
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/watch?v=nXNTnUiwkIE",
+              "id": "nXNTnUiwkIE",
+              "comment": ""
+            }
+          ]
+        },
+        {
+          "header": "Hållbarhet",
+          "items": [
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/watch?v=4W8EuQOvttY",
+              "id": "4W8EuQOvttY",
+              "comment": ""
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/Bo30AUfhPVz",
+              "comment": ""
+            },
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/naturskyddsforeningen/videos/2160756180847036",
+              "comment": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Flyget och klimatet",
+      "description": "Jag bryr mig mycket om klimatet och följer många personer och konton som handlar om miljön. Jag gillar även att resa men vet att det är dåligt för klimatet att flyga för mycket. Jag vill jämföra vad olika personer och sidor skriver om resor och klimatet.",
+      "columns": [
+        {
+          "header": "Resor",
+          "items": [
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/BozNK9NHqen",
+              "id": "",
+              "comment": ""
+            }
+          ]
+        },
+        {
+          "header": "Hållbarhet",
+          "items": [
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/BoiwzeJilKy",
+              "comment": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

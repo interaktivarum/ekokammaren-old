@@ -1,0 +1,27 @@
+@media screen and (min-width: 600px) {
+
+  .screenSmall{
+    display: none !important;
+  }
+
+  .screenLarge{
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .screenSmall{
+    display: normal;
+  }
+
+  .screenLarge{
+    display: none !important;
+  }
+
+  .center-col {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}

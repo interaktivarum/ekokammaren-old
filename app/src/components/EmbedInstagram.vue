@@ -1,7 +1,7 @@
 <template>
-  <div class="embedInstagram">
+  <div class="embedInstagram" :style="{width: width}">
 
-    <blockquote class="instagram-media" data-instgrm-captioned :data-instgrm-permalink="content.href" data-instgrm-version="9" style="width: 100%">
+    <blockquote class="instagram-media" data-instgrm :data-instgrm-permalink="content.href" data-instgrm-version="9" style="width: 100%">
       <a :href="content.href">Instagram</a>
     </blockquote>
 
@@ -24,12 +24,16 @@ export default {
   },
   mounted: function () {
 
-    if(this.content.reloadAPI){
+    if(window.instgrm){
+      window.instgrm.Embeds.process();
+    }
+
+    /*if(this.content.reloadAPI){
       window.instgrm.Embeds.process();
     }
     else{
       //store.commit('loadInstagramAPI');
-    }
+    }*/
 
   },
   computed:{
@@ -41,6 +45,12 @@ export default {
 <style scoped>
 
 .instagram-media{
+  margin: 0;
+  padding: 0;
+}
+
+.hide{
+  display: none;
 }
 
 </style>

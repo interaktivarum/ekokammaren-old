@@ -24,14 +24,19 @@ export default {
     return {
     }
   },
+  computed: {
+
+  },
   mounted: function () {
 
-    if(this.content.reloadAPI){
+    store.commit('reloadFacebookElement',this.$el);
+
+    /*if(this.content.reloadAPI){
       store.commit('reloadFacebookElement',this.$el);
     }
     else{
       //store.commit('loadFacebookAPI');
-    }
+    }*/
 
   },
   computed:{

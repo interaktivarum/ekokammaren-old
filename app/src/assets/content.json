@@ -1,17 +1,61 @@
 {
   "themes": [
     {
-      "header": "Rubrik",
-      "description": "Beskrivning",
+      "header": "Shopping och klimatet",
+      "description": "Jag bryr mig mycket om klimatet och följer många personer och konton som handlar om miljön. Jag gillar även shopping men vet att det är dåligt för klimatet att handla för mycket nya saker. Här nedanför kan du jämföra vad olika personer och sidor skriver om shopping och klimatet.",
       "columns": [
         {
-          "header": "Kolumn 1",
+          "header": "Shopping",
+          "color": "#eeaa00",
+          "description": "I denna kolumn visas inlägg som bidrar till ökad prylhets. Med mycket sådan information i sitt sociala flöde kan ens sug efter nya och fler produkter öka.",
           "items": [
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/BnEmX85AgNx",
+              "id": "",
+              "comment": ""
+            },
+            {
+              "platform": "website",
+              "href": "https://nyheter24.se/shopping/916052-105-prylar-for-dig-som-alskar-hosten",
+              "id": "",
+              "comment": ""
+            },
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/watch?v=nXNTnUiwkIE",
+              "id": "nXNTnUiwkIE",
+              "comment": ""
+            },
+            {
+              "href": "https://www.apple.com/se/iphone/"
+            }
           ]
         },
         {
-          "header": "Kolumn 2",
+          "header": "Hållbarhet",
+          "color": "#44aa44",
+          "description": "I denna kolumn visas kritiska eller upplysande inlägg om konsumtion ur ett miljö- och hållbarhetsperspektiv. Med mycket sådan information i sitt sociala flöde kan ens miljömedvetenhet öka.",
           "items": [
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/watch?v=4W8EuQOvttY",
+              "id": "4W8EuQOvttY",
+              "comment": ""
+            },
+            {
+              "href":"https://www.facebook.com/MaxGustafs0n/photos/a.249751588432541/2250236645050682/"
+            },
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/naturskyddsforeningen/videos/2160756180847036",
+              "comment": ""
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/p/Bo30AUfhPVz",
+              "comment": ""
+            }
           ]
         }
       ]
@@ -70,7 +114,7 @@
             },
             {
               "platform": "youtube",
-              "href": "https://www.youtube.com/embed/5Sn3pgQJgII",
+              "href": "https://www.youtube.com/watch?v=5Sn3pgQJgII",
               "id": "5Sn3pgQJgII",
               "comment": ""
             },
@@ -109,56 +153,6 @@
             {
               "platform": "facebook",
               "href": "https://www.facebook.com/svegot/posts/1007262092793960",
-              "comment": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "header": "Shopping och klimatet",
-      "description": "Jag bryr mig mycket om klimatet och följer många personer och konton som handlar om miljön. Jag gillar även shopping men vet att det är dåligt för klimatet att handla för mycket nya saker. Jag vill jämföra vad olika personer och sidor skriver om shopping och klimatet.",
-      "columns": [
-        {
-          "header": "Shopping",
-          "items": [
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/p/BnEmX85AgNx",
-              "id": "",
-              "comment": ""
-            },
-            {
-              "platform": "website",
-              "href": "https://nyheter24.se/shopping/916052-105-prylar-for-dig-som-alskar-hosten",
-              "id": "",
-              "comment": ""
-            },
-            {
-              "platform": "youtube",
-              "href": "https://www.youtube.com/watch?v=nXNTnUiwkIE",
-              "id": "nXNTnUiwkIE",
-              "comment": ""
-            }
-          ]
-        },
-        {
-          "header": "Hållbarhet",
-          "items": [
-            {
-              "platform": "youtube",
-              "href": "https://www.youtube.com/watch?v=4W8EuQOvttY",
-              "id": "4W8EuQOvttY",
-              "comment": ""
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/p/Bo30AUfhPVz",
-              "comment": ""
-            },
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/naturskyddsforeningen/videos/2160756180847036",
               "comment": ""
             }
           ]

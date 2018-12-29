@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view/>
+    <e-header id="headerview" class="hideInPrint"></e-header>
+    <router-view id="routerview"/>
+    <e-footer id="footerview" class="hideInPrint"></e-footer>
   </div>
 </template>
 
@@ -8,8 +10,13 @@
 
 import { store } from '@/store';
 
+import EHeader from '@/components/views/EHeader'
+import EFooter from '@/components/views/EFooter'
+
 export default {
   components:{
+    EHeader,
+    EFooter
   },
   name: 'App',
 }
@@ -17,25 +24,10 @@ export default {
 </script>
 
 <style>
-
-html{
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3{
-  margin: 0.75em 0 0.75em 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+  @import '/assets/style/style.css';
+  @import '/assets/style/fonts.css';
+  @import '/assets/style/screens.css';
+  @import '/assets/style/form.css';
+  @import '/assets/style/animations.css';
+  @import "vue-swatches/dist/vue-swatches.min.css"
 </style>

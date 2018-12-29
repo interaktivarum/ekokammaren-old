@@ -1,29 +1,51 @@
 <template>
-  <div class="socialTheme">
+  <div class="component">
+    <div class="component-content">
 
-    <div class="topSection">
+      <div class="topSection center-col">
 
-      <div class="header">
-        <editable-input v-model="content.header" type="input" placeholder="Rubrik" tag="h1" class="underline" ></editable-input>
+        <h1 v-if="content.header">{{content.header}}</h1>
+        <h1 v-if="!content.header" class="text-gray">Jämförelsen saknar rubrik</h1>
+
+        <p class="description">
+          {{content.description}}
+        </p>
+
       </div>
 
-      <p class="description">
-        <editable-input v-model="content.description" type="textarea" placeholder="Beskrivning" tag="span"></editable-input>
-      </p>
+      <div class="columns" :class="{'overflow': overflow}" id="columns">
+        <div v-for="(column,index) in content.columns" class="column">
+          <social-column :content="column" :index="index"  ></social-column>
 
-    </div>
+          <div class="scrollArea font3 screenSmall" v-if="index < content.columns.length - 1" :style="{'background-color':content.columns[index+1].color}">
+            Scrolla ner för kolumn: {{content.columns[index+1].header}}
+          </div>
 
-    <div class="columns">
-      <social-column v-for="(column,index) in content.columns" width="450" :content="column" :index="index" class="column"></social-column>
-    </div>
+        </div>
 
-    <div class="bottomSection">
+      </div>
+      <h3 v-if="content.columns && !content.columns.length" class="center-col text-gray">
+        Jämförelsen saknar kolumner
+      </h3>
 
-      <p class="creator">
-        Jämförelsen <i>{{content.header}}</i> är skapad av besökare till Ekokammaren.
-        <br />
-        Ekokammaren ansvarar ej för dess innehåll eller uttryckta åsikter.
-      </p>
+      <hr class="margin" />
+
+      <div class="bottomSection center-col creator">
+        <p>
+          <i v-if="content.header">{{content.header}}</i>
+          <span v-if="!content.header">Sidan</span>
+          är skapad som en jämförelse ur olika perspektiv.
+        </p>
+
+        <p>
+          Jämförelsen presenterar inlägg från olika avsändare på sociala medier, YouTube, nyhetssidor, diskussionsforum och webbplatser. Respektive avsändare ansvarar för det innehåll och de åsikter som uttrycks i de egna inläggen.
+        </p>
+
+        <p>
+          Kategoriseringen och urvalet av inlägg är skapat manuellt. Utvalda avsändare eller inlägg har inte själva uttryckt tillhörighet till respektive kategori. Respektive avsändare i en och samma kategori har nödvändigtvis ingen relation till varandra.
+        </p>
+
+      </div>
 
     </div>
 
@@ -46,12 +68,18 @@ export default {
   },
   data () {
     return {
-      test: "testar"
+      width: 0,
+      overflow: false
     }
   },
-  methods: {
+  computed: {
+
   },
-  mounted: function () {
+  methods: {
+    isOverflowing: function () {
+      let el = document.getElementById("columns");
+      return el.scrollWidth > el.offsetWidth;
+    },
   }
 }
 </script>
@@ -59,50 +87,50 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.socialTheme{
-}
-
-.topSection, .bottomSection{
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.header{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.header .underline{
-  display: inline-block;
-  padding-bottom: 15px;
-  margin-bottom: 0px;
-  border-bottom: 5px solid gray;
-}
-
-.description, .creator{
-  text-align: left;
-  margin: 30px auto;
+.description{
+  margin-bottom: 50px;
 }
 
 .creator{
-  color: rgb(50,50,50);
+  color: gray;
 }
 
 .columns{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
+  align-items: flex-start;
   background: white;
 }
 
-.column{
-  margin: 10px 10px 10px 0px;
+.columns.overflow{
+  justify-content: flex-start;
 }
 
-.column:last-child{
-  margin-right: 0px;
+.column{
+  flex: 0 1 450px;
+  border: 1px solid rgb(200,200,200);
+  margin: 0 5px 0 5px;
+}
+
+.scrollArea{
+  position: sticky;
+  bottom: 0px;
+  text-align: center;
+  padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .columns{
+    display: inline;
+  }
+
+  .column{
+    border: 0;
+    margin: 0;
+  }
+
 }
 
 </style>

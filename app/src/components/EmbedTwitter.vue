@@ -25,12 +25,14 @@ export default {
   },
   mounted: function () {
 
-    if(this.content.reloadAPI){
+    store.commit('reloadTwitterAPI');
+
+    /*if(this.content.reloadAPI){
       store.commit('reloadTwitterAPI');
     }
     else{
       //store.commit('loadTwitterAPI');
-    }
+    }*/
 
   },
   computed:{

@@ -1,22 +1,29 @@
 <template>
-  <div class="socialColumn" :style="{'width': width + 'px'}">
+  <div class="component">
+    <div class="component-content">
 
-    <div class="header">
-      <editable-input v-model="content.header" type="input" placeholder="Rubrik" tag="h2"></editable-input>
+    <div class="header" :style="{'background-color': content.color}">
+      <h2 v-if="content.header">{{content.header}}</h2>
+      <h2 v-if="!content.header" class="text-gray">Kolumnen saknar rubrik</h2>
+    </div>
+
+    <div class="description" :style="{'border-color': content.color}">
+      <span v-if="content.description">
+        {{content.description}}
+      </span>
+      <span v-if="!content.description">
+        Kolumnen saknar beskrivning
+      </span>
     </div>
 
     <!--social-parser :column="index" :addToTop="true" class="addItem"></social-parser-->
 
     <div  v-if="content.items.length > 0" class="items">
-      <social-item v-for="item in content.items" :content="item" :width="widthItem" class="item"></social-item>
+      <social-item v-for="item in content.items" :content="item" class="item" v-if="item.href"></social-item>
     </div>
 
-    <social-parser :column="index" class="addItem"></social-parser>
-
-    <!--pre>
-      {{content}}
-    </pre-->
-
+    <!--social-parser :column="index" class="addItem"></social-parser-->
+  </div>
   </div>
 </template>
 
@@ -37,16 +44,12 @@ export default {
     index: "",
     content: { default: null },
     header: {default: ""},
-    width: {default: 0}
   },
   data () {
     return {
     }
   },
   computed: {
-    widthItem: function (){
-      return this.width - 20; //padding
-    }
   }
 }
 </script>
@@ -54,8 +57,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.socialColumn{
-  border: 1px solid rgb(200,200,200);
+.component-content{
+  /*border: 0px solid rgb(200,200,200);*/
 }
 
 .socialColumn:last-child{
@@ -63,24 +66,44 @@ export default {
 
 .header{
   position: sticky;
-  display: grid;
   top: -1px;
+  bottom: 0px;
   z-index: 1;
+  padding: 5px;
   text-align: center;
-  background: rgba(255,255,255,1);
-  border-bottom: 5px solid lightgray;
+  background: white;
+}
+
+.description{
+  padding: 20px;
+  font-size: 10pt;
+  background: rgb(240,240,240);
+  color: rgb(50,50,50);
+  border-top: 3px solid lightgray;
+  border-bottom: 3px solid lightgray;
 }
 
 .items{
   padding: 10px 10px 10px 10px;
   background: rgb(230,230,230);
+  box-sizing: border-box;
 }
 
 .item{
-  position: relative;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 2px gray;
+  margin-bottom: 5px;
 }
 
 .addItem{
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .items{
+    padding: 5px;
+  }
 
 }
 

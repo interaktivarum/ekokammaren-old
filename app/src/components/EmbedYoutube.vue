@@ -21,7 +21,7 @@ export default {
   },
   computed:{
     src: function () {
-      return "https://www.youtube.com/embed/" + this.content.id;
+      return "https://www.youtube.com/embed/" + this.content.query.v;
     },
     height: function () {
       return 315/560 * this.width;

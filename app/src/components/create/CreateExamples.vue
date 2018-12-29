@@ -10,7 +10,7 @@ export default {
   components:{
 
   },
-  name: 'WsInstructions',
+  name: 'Create',
   data () {
     return {
     }

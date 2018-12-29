@@ -93,7 +93,9 @@ export const store = new Vuex.Store({
     },
 
     reloadFacebookElement: (state, element) => {
-      FB.XFBML.parse(element);
+      if(typeof(FB) !== 'undefined'){
+        FB.XFBML.parse(element);
+      }
     }
 
   },

@@ -1,0 +1,94 @@
+input, textarea{
+  font-family: "Roboto";
+  background: white;
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0px 5px 0px;
+  box-sizing: border-box;
+  transition: all 0.25s;
+}
+
+input{
+  font-size: 12pt;
+  border: 0;
+  border-bottom: 2px solid lightgray;
+}
+
+input.small{
+  font-size: 10pt;
+  font-weight: normal !important;
+}
+
+input::placeholder, textarea::placeholder{
+  color: gray;
+}
+
+input:hover, textarea:hover{
+  border-color: gray;
+}
+
+input:focus, textarea:focus{
+  border-color: gray;
+  outline: none;
+}
+
+input:not(:placeholder-shown){
+  /*background: MediumSeaGreen;*/
+  border-color: MediumSeaGreen;
+  /*color: white;*/
+  font-weight: bold;
+}
+
+input.gray:not(:placeholder-shown){
+  border-color: gray;
+}
+
+textarea{
+  font-size: 11pt;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+button{
+  font-family: "Roboto";
+  background: rgb(240,240,240);
+  padding: 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  font-size: 10pt;
+  cursor: pointer;
+  transition: all 0.25s;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+button:hover{
+  background: lightgray;
+  border: 1px solid gray;
+}
+
+button.red{
+  /*background: rgb(240,230,230);*/
+
+}
+
+button.red:hover{
+  background: rgb(230,200,200);
+  border-color: rgb(30,0,0);
+  color: rgb(30,0,0);
+}
+
+button.green{
+  /*background: rgb(230,240,230);*/
+
+}
+
+button.green:hover{
+  background: rgb(200,220,200);
+  border-color: rgb(0,30,0);
+  color: rgb(0,30,0);
+}
+
+button.rounded{
+  border-radius: 15px;
+}

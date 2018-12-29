@@ -1,7 +1,6 @@
 <template>
   <span>
-
-    <div class="og-container" :style="{width: width}" @click="openurl">
+    <div class="og-container" :style="{width: width}" @click="openurl" v-if="!error">
         <div class="image" :style="{'background-image': 'url(' + content['og:image'] + ')', height: imgheight+'px' }"></div>
         <div class="text" v-if="content">
           <div class="textContainer">
@@ -18,6 +17,11 @@
           </div>
         </div>
     </div>
+    <div v-if="error" class="error">
+      <a :href="url" target="_blank">{{url}}</a>
+      <br />
+      Det går inte att förhandsvisa webbplatsen
+    </div>
 
   </span>
 </template>
@@ -30,7 +34,8 @@ export default {
   data () {
     return {
       content: "",
-      published: ""
+      published: "",
+      error: false
     }
   },
   props: {
@@ -45,10 +50,16 @@ export default {
   },
   methods: {
     onsuccess: function (response){
-      this.content = response.body;
-      this.published = this.content["article:published_time"] ? new Date(this.content["article:published_time"]).toLocaleDateString() : null;
+      if(!Array.isArray(response.body)){
+        this.content = response.body;
+        this.published = this.content["article:published_time"] ? new Date(this.content["article:published_time"]).toLocaleDateString() : null;
+      }
+      else{
+        this.error = true;
+      }
     },
     onerror: function (response){
+      this.error = true
     },
     openurl: function () {
       window.open(this.url);
@@ -103,22 +114,10 @@ export default {
     font-size: smaller;
   }
 
-  /*@media screen and (max-width: 600px) {
-
-    .og-container{
-      height: 400px;
-      flex-direction: column;
-    }
-
-    .og-container .image{
-      flex: 1 1 50%;
-      flex-basis: auto;
-    }
-
-    .og-container .text{
-      flex-basis: auto;
-    }
-
-  }*/
+  .error{
+    text-align: center;
+    padding: 10px;
+    color: gray;
+  }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="EmbedWebsite">
-    
-    <og-embed :url="content.href" :width="width"></og-embed>
+
+    <og-embed :url="content.href" :width="width" v-if="valid"></og-embed>
 
   </div>
 </template>
@@ -20,19 +20,16 @@ export default {
     href: "",
     width: ""
   },
+  computed: {
+    valid: function (){
+      return true;
+    }
+  },
   data () {
     return {
     }
   },
   mounted: function () {
-  },
-  computed:{
-    src: function () {
-      return "https://www.youtube.com/embed/" + this.content.id;
-    },
-    height: function () {
-      return 315/560 * this.width;
-    }
   }
 }
 </script>
